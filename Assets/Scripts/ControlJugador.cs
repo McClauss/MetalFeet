@@ -13,13 +13,19 @@ public class ControlJugador : MonoBehaviour
 
     //Variables para manejo de Salto
     public Rigidbody rb;
-    public float fuerazSalto=8f;
+    public float fuerazSalto=4f;
     public bool puedeSaltar;
 
     //Variables para manejo de agachado
     public float velocidadParado;
     public float velocidadAgachado;
+
+    //Variables para manejo de golpes recibidos
+    public bool estaGolpeado=false;
     
+    //Variables para Temporizador
+    float tiempoRestante=0;
+    float tiempo=0;
 
     void Start()
     {
@@ -55,6 +61,7 @@ public class ControlJugador : MonoBehaviour
         if(puedeSaltar==true){
             Saltar();
             Agachar();
+            RecibirGolpeB();
             anim.SetBool("tocaSuelo",true);
         }
         else{
@@ -81,6 +88,39 @@ public class ControlJugador : MonoBehaviour
         else{
             anim.SetBool("agachado",false);
             velocidadM=velocidadParado;
+        }
+    }
+
+    void RecibirGolpeB(){
+        if(estaGolpeado==true){
+            anim.SetBool("golpeBajo",true);
+            estaGolpeado=false;
+        }
+        else
+        {
+            tiempo=Temporizador(1);
+            if(tiempo==0){
+                anim.SetBool("golpeBajo",false);
+            }
+        }
+    }
+
+    //Método para detectar impactos de lanza
+    void OnTriggerEnter(Collider col){
+        if(col.transform.gameObject.tag == "Lanza"){
+            estaGolpeado=true;
+        }
+    }
+
+    //Temporizador
+    float Temporizador(float tiempoLimite){
+        tiempoRestante += Time.deltaTime;//Contador en ascenso
+        if(tiempoRestante>=tiempoLimite){
+            tiempoRestante=0;
+            return tiempoRestante;
+        }
+        else{
+            return tiempoRestante;
         }
     }
 }

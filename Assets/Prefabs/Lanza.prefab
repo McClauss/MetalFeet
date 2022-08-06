@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3452877463996568989}
   - component: {fileID: 3537824126411948574}
+  - component: {fileID: 539518059167956776}
+  - component: {fileID: 6071919216994203267}
   m_Layer: 0
   m_Name: Lanza
   m_TagString: Lanza
@@ -26,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2639326462117138215}
   m_LocalRotation: {x: -0.006639787, y: 0.0067013674, z: -0.71034473, w: 0.7037908}
   m_LocalPosition: {x: -1.027, y: 0.416, z: -7.735}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.2, y: 0.09, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2853912107051295941}
@@ -45,6 +47,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30046c42c59a5f4c82dfd978032c8f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedL: 0.009
+  direccionL: {x: 10, y: 0, z: 0}
+--- !u!114 &539518059167956776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2639326462117138215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026f2b68031d37c46a6025256bc2331b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 4
+--- !u!65 &6071919216994203267
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2639326462117138215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.37520096, y: 2.0620673, z: 0.17579351}
+  m_Center: {x: 0.00039017224, y: 8.254458, z: 0.010469867}
 --- !u!1 &6425808249414793214
 GameObject:
   m_ObjectHideFlags: 0

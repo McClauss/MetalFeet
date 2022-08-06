@@ -2310,6 +2310,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3468ca07b506dbf4d8da202227580fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabLanza: {fileID: 2639326462117138215, guid: 6f00ce4c39d639f468f5e63f7c592d89, type: 3}
+  spotLanza1: {fileID: 1794765127}
+  spotLanza2: {fileID: 1939968991}
+  spotLanza3: {fileID: 1299373613}
+  spotLanza4: {fileID: 1852856406}
+  spotLanza5: {fileID: 1156293954}
+  spotLanza6: {fileID: 786563574}
+  posJugador: {fileID: 1629652402}
 --- !u!1 &1778864511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,6 +2597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98bc250880edc2446a7907bd422b128f, type: 3}
       propertyPath: m_LocalPosition.z
+      value: -13.43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98bc250880edc2446a7907bd422b128f, type: 3}
       propertyPath: m_LocalRotation.w

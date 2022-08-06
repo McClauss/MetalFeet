@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3452877463996568989}
+  - component: {fileID: 3537824126411948574}
   m_Layer: 0
   m_Name: Lanza
-  m_TagString: Untagged
+  m_TagString: Lanza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2639326462117138215}
-  m_LocalRotation: {x: -0.006640815, y: 0.006702737, z: -0.71034306, w: 0.70379245}
+  m_LocalRotation: {x: -0.006639787, y: 0.0067013674, z: -0.71034473, w: 0.7037908}
   m_LocalPosition: {x: -1.027, y: 0.416, z: -7.735}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
@@ -32,6 +33,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.01, y: 1.081, z: -90.531}
+--- !u!114 &3537824126411948574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2639326462117138215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30046c42c59a5f4c82dfd978032c8f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6425808249414793214
 GameObject:
   m_ObjectHideFlags: 0

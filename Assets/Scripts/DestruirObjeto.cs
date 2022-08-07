@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DestruirObjeto : MonoBehaviour
 {
-    public float delay=4f;
+    public float delay=2f;
 
     void Start()
     {

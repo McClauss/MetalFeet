@@ -25,6 +25,18 @@ public class GameManager : MonoBehaviour
 
     //Para manejo de animación muerte
     public bool estaMuerto=false;
+
+    //Para Instanciado de Antorchas
+    public GameObject prefabAntorcha;
+    public Transform spotAntorcha1;
+    public Transform spotAntorcha2;
+    public Transform spotAntorcha3;
+    public Transform spotAntorcha4;
+    public Transform spotAntorcha5;
+    public Transform spotAntorcha6;
+    public Transform spotAntorcha7;
+    public Transform spotAntorcha8;
+
     void Awake()
     {
         if(Instance==null){
@@ -41,6 +53,14 @@ public class GameManager : MonoBehaviour
         puntaje=0;
         vida=100;
         vidas=3;
+        Instantiate(prefabAntorcha,spotAntorcha1.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha2.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha3.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha4.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha5.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha6.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha7.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha8.position,transform.rotation);
     }
 
     // Update is called once per frame

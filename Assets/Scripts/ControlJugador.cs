@@ -9,7 +9,8 @@ public class ControlJugador : MonoBehaviour
     public float velocidadR=200.0f;//Velocidad Rotacion
     public float x,y;//Para obtener movimiento en ejes x,y
 
-    private Animator anim;//Para animaciones
+    private Animator anim;//Para animación Jugador
+    public Animator animEnemigo;//Para animación Enemigo
 
     //Variables para manejo de Salto
     public Rigidbody rb;
@@ -31,6 +32,7 @@ public class ControlJugador : MonoBehaviour
     {
         puedeSaltar=false;
         anim=GetComponent<Animator>();//Para traer valores del animador del personaje
+        //animEnemigo=GetComponent<Animator>();//Para traer valores del animador del enemigo1
 
         velocidadParado=velocidadM;
         velocidadAgachado=velocidadM*0.5f;
@@ -109,6 +111,8 @@ public class ControlJugador : MonoBehaviour
     void OnTriggerEnter(Collider col){
         if(col.transform.gameObject.tag == "Lanza"){
             estaGolpeado=true;
+        }else if(col.transform.gameObject.name == "SpotNv1_2"){
+            animEnemigo.SetBool("abreBrazos",true);
         }
     }
 

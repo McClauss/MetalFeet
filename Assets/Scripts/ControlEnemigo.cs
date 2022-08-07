@@ -3,11 +3,15 @@ using UnityEngine;
 public class ControlEnemigo : MonoBehaviour
 {
 
+    //Animador Enemigo
     public Animator anim;
+
+    //Para manejo de animación muerte
+    bool estaMuerto=false;
     
     void Start()
     {
-        //anim=GetComponent<Animator>();
+        anim=GetComponent<Animator>();
     }
 
     void FixedUpdate(){

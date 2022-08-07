@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     private Animator anim;
 
     //Para manejo de animación muerte
-    public bool estaMuerto=false;
+    bool estaMuerto=false;
 
     //Para Instanciado de Antorchas
     public GameObject prefabAntorcha;
@@ -36,6 +36,21 @@ public class GameManager : MonoBehaviour
     public Transform spotAntorcha6;
     public Transform spotAntorcha7;
     public Transform spotAntorcha8;
+    public Transform spotAntorcha9;
+    public Transform spotAntorcha10;
+    public Transform spotAntorcha11;
+    public Transform spotAntorcha12;
+    public Transform spotAntorcha13;
+    public Transform spotAntorcha14;
+    public Transform spotAntorcha15;
+    public Transform spotAntorcha16;
+    public Transform spotAntorcha17;
+    public Transform spotAntorcha18;
+    public Transform spotAntorcha19;
+    public Transform spotAntorcha20;
+    public Transform spotAntorcha21;
+    public Transform spotAntorcha22;
+    public Transform spotAntorcha23;
 
     void Awake()
     {
@@ -53,14 +68,7 @@ public class GameManager : MonoBehaviour
         puntaje=0;
         vida=100;
         vidas=3;
-        Instantiate(prefabAntorcha,spotAntorcha1.position,transform.rotation);
-        Instantiate(prefabAntorcha,spotAntorcha2.position,transform.rotation);
-        Instantiate(prefabAntorcha,spotAntorcha3.position,transform.rotation);
-        Instantiate(prefabAntorcha,spotAntorcha4.position,transform.rotation);
-        Instantiate(prefabAntorcha,spotAntorcha5.position,transform.rotation);
-        Instantiate(prefabAntorcha,spotAntorcha6.position,transform.rotation);
-        Instantiate(prefabAntorcha,spotAntorcha7.position,transform.rotation);
-        Instantiate(prefabAntorcha,spotAntorcha8.position,transform.rotation);
+        IniciaAntorchas();
     }
 
     // Update is called once per frame
@@ -69,6 +77,33 @@ public class GameManager : MonoBehaviour
         CambioEscena();
         VerificaVida();
         VerificaCaida();
+    }
+
+    //Metodo que inicia prefabs de antorchas
+    void IniciaAntorchas(){
+        Instantiate(prefabAntorcha,spotAntorcha1.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha2.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha3.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha4.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha5.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha6.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha7.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha8.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha9.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha10.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha11.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha12.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha13.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha14.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha15.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha16.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha17.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha18.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha19.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha20.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha21.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha22.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha23.position,transform.rotation);
     }
     
     //Método para cambio de escena por teclado

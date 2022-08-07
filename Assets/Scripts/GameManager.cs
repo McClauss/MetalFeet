@@ -51,6 +51,14 @@ public class GameManager : MonoBehaviour
     public Transform spotAntorcha21;
     public Transform spotAntorcha22;
     public Transform spotAntorcha23;
+    public Transform spotAntorcha24;
+    public Transform spotAntorcha25;
+    public Transform spotAntorcha26;
+    public Transform spotAntorcha27;
+    public Transform spotAntorcha28;
+    public Transform spotAntorcha29;
+    public Transform spotAntorcha30;
+    public Transform spotAntorcha31;
 
     void Awake()
     {
@@ -104,6 +112,14 @@ public class GameManager : MonoBehaviour
         Instantiate(prefabAntorcha,spotAntorcha21.position,transform.rotation);
         Instantiate(prefabAntorcha,spotAntorcha22.position,transform.rotation);
         Instantiate(prefabAntorcha,spotAntorcha23.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha24.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha25.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha26.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha27.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha28.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha29.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha30.position,transform.rotation);
+        Instantiate(prefabAntorcha,spotAntorcha31.position,transform.rotation);
     }
     
     //Método para cambio de escena por teclado

@@ -3,7 +3,7 @@ using UnityEngine;
 public class ParedEntrada : MonoBehaviour
 {
     
-    //Para Instanciado de Proyectil Prefab
+    //Para Instanciado de Lanza Prefab
     public GameObject prefabLanza;
     public Transform spotLanza1;
     public Transform spotLanza2;

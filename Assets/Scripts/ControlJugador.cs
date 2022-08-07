@@ -13,7 +13,7 @@ public class ControlJugador : MonoBehaviour
 
     //Variables para manejo de Salto
     public Rigidbody rb;
-    public float fuerazSalto=4f;
+    public float fuerzaSalto=5f;
     public bool puedeSaltar;
 
     //Variables para manejo de agachado
@@ -21,7 +21,7 @@ public class ControlJugador : MonoBehaviour
     public float velocidadAgachado;
 
     //Variables para manejo de golpes recibidos
-    public bool estaGolpeado=false;
+    bool estaGolpeado=false;
     
     //Variables para Temporizador
     float tiempoRestante=0;
@@ -77,7 +77,7 @@ public class ControlJugador : MonoBehaviour
     void Saltar(){
         if(Input.GetKeyDown(KeyCode.Space)){
             anim.SetBool("salto",true);
-            rb.AddForce(new Vector3(0,fuerazSalto,0),ForceMode.Impulse);
+            rb.AddForce(new Vector3(0,fuerzaSalto,0),ForceMode.Impulse);
         }
     }
     void Agachar(){

@@ -13,6 +13,7 @@ public class ControlJugador : MonoBehaviour
     public Animator animEnemigo;//Para animación Enemigo
 
     bool enemigoBrazos=false;
+    bool enemigoCorre=false;
 
     //Variables para manejo de Salto
     public Rigidbody rb;
@@ -34,8 +35,6 @@ public class ControlJugador : MonoBehaviour
     {
         puedeSaltar=false;
         anim=GetComponent<Animator>();//Para traer valores del animador del personaje
-        //animEnemigo=GetComponent<Animator>();//Para traer valores del animador del enemigo1
-
         velocidadParado=velocidadM;
         velocidadAgachado=velocidadM*0.5f;
     }
@@ -67,6 +66,7 @@ public class ControlJugador : MonoBehaviour
             Agachar();
             RecibirGolpeB();
             AbrirBrazosE();
+            CorrerE();
             anim.SetBool("tocaSuelo",true);
         }
         else{
@@ -123,12 +123,29 @@ public class ControlJugador : MonoBehaviour
         }
     }
 
-    //Método para detectar impactos de lanza
+    //Metodo para que enemigo inicie a correr
+    void CorrerE(){
+        if(enemigoCorre==true){
+            animEnemigo.SetBool("estaCorriendo",true);
+            animEnemigo.SetBool("abreBrazos",false);
+            enemigoCorre=false;
+        }
+        else{
+           tiempo=Temporizador(2.5f);
+           if(tiempo==0){
+                animEnemigo.SetBool("estaCorriendo",false);
+           }
+        }
+    }
+
     void OnTriggerEnter(Collider col){
         if(col.transform.gameObject.tag == "Lanza"){
             estaGolpeado=true;
         }else if(col.transform.gameObject.name == "SpotNv1_2"){
             enemigoBrazos=true;
+        }else if(col.transform.gameObject.name == "SpotNv1_3"){
+            enemigoBrazos=false;
+            enemigoCorre=true;
         }
     }
 

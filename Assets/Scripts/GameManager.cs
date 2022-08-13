@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     //Variables para Puntaje, Vidas y vida del jugador
     public static int puntaje;
     public static int vida;
+    public static int vidaEnemigoNv1;
     public static int vidas;
 
     //Variable para control de Niveles
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
     {
         puntaje=0;
         vida=100;
+        vidaEnemigoNv1=120;
     }
 
     void Update()
@@ -54,6 +56,10 @@ public class GameManager : MonoBehaviour
         vida=vida+cantidad;
         Debug.Log("Impacto!. Sangre restante: "+vida);
     }
+    public static void ModificaVidaEnemigo(int cantidad){
+        vidaEnemigoNv1=vidaEnemigoNv1+cantidad;
+        Debug.Log("Impacto!. Sangre restante: "+vidaEnemigoNv1);
+    }
 
     public static int GetPuntaje(){
         return puntaje;
@@ -61,7 +67,9 @@ public class GameManager : MonoBehaviour
     public static int GetVida(){
         return vida;
     }
-
+    public static int GetVidaEnemigo(){
+        return vidaEnemigoNv1;
+    }
     public static int GetNivel(){
         return nivel;
     }

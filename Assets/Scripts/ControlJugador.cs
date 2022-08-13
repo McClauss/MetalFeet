@@ -14,6 +14,7 @@ public class ControlJugador : MonoBehaviour
 
     bool enemigoBrazos=false;
     bool enemigoCorre=false;
+    bool estaMuerto=false;
 
     //Variables para manejo de Salto
     public Rigidbody rb;
@@ -31,12 +32,18 @@ public class ControlJugador : MonoBehaviour
     float tiempoRestante=0;
     float tiempo=0;
 
+    //Variable para Respawn
+    Vector3 posInicial;
+    //Vector3 posNivel;
+
     void Start()
     {
         puedeSaltar=false;
         anim=GetComponent<Animator>();//Para traer valores del animador del personaje
         velocidadParado=velocidadM;
         velocidadAgachado=velocidadM*0.5f;
+        posInicial=transform.position;
+        //SpawnNivel();
     }
 
     void FixedUpdate(){
@@ -47,6 +54,8 @@ public class ControlJugador : MonoBehaviour
     {
         Animar();
         ConsultarM();
+        VerificaVida();
+        VerificaCaida();
     }
 
     void Mover(){
@@ -100,6 +109,9 @@ public class ControlJugador : MonoBehaviour
         if(estaGolpeado==true){
             anim.SetBool("golpeBajo",true);
             estaGolpeado=false;
+            if(estaMuerto==false){
+                GameManager.ModificaVida(-10);
+            }
         }
         else
         {
@@ -109,6 +121,39 @@ public class ControlJugador : MonoBehaviour
             }
         }
     }
+
+    /*Método para Verificar Vida*/
+    void VerificaVida(){
+        if(GameManager.GetVida()<=0){
+            Debug.Log("Haz Muerto "+GameManager.GetVida());
+            estaMuerto=true;
+            anim.SetBool("estaMuerto",true);
+        }
+    }
+
+    /*Método para Verificar Caida del Tablero*/
+    void VerificaCaida(){
+        /*Evalua si el jugador cayo del escenario*/
+        if(transform.position.y <-10){
+            Respawn();
+            
+        }
+    }
+
+    //Manejo Respawn
+    void Respawn(){
+        transform.position=posInicial;
+    }
+    
+    /*
+    //Para Respawn al Cambiar de Nivel
+    void SpawnNivel(){
+        if(GameManager.GetNivel()==2){
+            posNivel=new Vector3(12.86f,0.51f,15.31f);
+            transform.position=posNivel;
+        }
+    }
+    */
 
     //Metodo para animacion de enemigo cuando se activa
     void AbrirBrazosE(){

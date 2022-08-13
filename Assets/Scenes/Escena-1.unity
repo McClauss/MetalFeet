@@ -893,6 +893,37 @@ Transform:
   m_Father: {fileID: 1080695561}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &263633476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 263633477}
+  m_Layer: 0
+  m_Name: CamaraManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &263633477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263633476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5720686, y: 0.8514078, z: -14.231767}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &273774027
 GameObject:
   m_ObjectHideFlags: 0
@@ -3593,6 +3624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1058153518}
+  - component: {fileID: 1058153519}
   m_Layer: 0
   m_Name: Nivel1
   m_TagString: Untagged
@@ -3624,6 +3656,50 @@ Transform:
   m_Father: {fileID: 273774028}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1058153519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058153517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caaf9fb58a0dfc348ae55e8a1a0a4169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabAntorcha: {fileID: 4532128132370706530, guid: bfa6a01433f6131459a05c7557c5db11, type: 3}
+  spotAntorcha1: {fileID: 1984114641}
+  spotAntorcha2: {fileID: 126435236}
+  spotAntorcha3: {fileID: 936882090}
+  spotAntorcha4: {fileID: 940736993}
+  spotAntorcha5: {fileID: 1074432370}
+  spotAntorcha6: {fileID: 469079547}
+  spotAntorcha7: {fileID: 2014693937}
+  spotAntorcha8: {fileID: 1449900742}
+  spotAntorcha9: {fileID: 668776787}
+  spotAntorcha10: {fileID: 169839731}
+  spotAntorcha11: {fileID: 47095843}
+  spotAntorcha12: {fileID: 186935539}
+  spotAntorcha13: {fileID: 846581033}
+  spotAntorcha14: {fileID: 1804189819}
+  spotAntorcha15: {fileID: 367080765}
+  spotAntorcha16: {fileID: 403262713}
+  spotAntorcha17: {fileID: 1751963354}
+  spotAntorcha18: {fileID: 1603475420}
+  spotAntorcha19: {fileID: 1607093229}
+  spotAntorcha20: {fileID: 194099866}
+  spotAntorcha21: {fileID: 1094196204}
+  spotAntorcha22: {fileID: 226396741}
+  spotAntorcha23: {fileID: 1394331611}
+  spotAntorcha24: {fileID: 2004939439}
+  spotAntorcha25: {fileID: 492581810}
+  spotAntorcha26: {fileID: 758994455}
+  spotAntorcha27: {fileID: 50183071}
+  spotAntorcha28: {fileID: 1639151381}
+  spotAntorcha29: {fileID: 1561111688}
+  spotAntorcha30: {fileID: 1892424316}
+  spotAntorcha31: {fileID: 1134596306}
 --- !u!1 &1071303528
 GameObject:
   m_ObjectHideFlags: 0
@@ -4516,6 +4592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1343535755}
   - component: {fileID: 1343535754}
+  - component: {fileID: 1343535756}
   m_Layer: 0
   m_Name: ManagerAudio
   m_TagString: Untagged
@@ -4634,6 +4711,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1343535756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343535753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14ed6d61a698ee4980223c467958dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1362807412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5322,41 +5411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e15304f9f89ba14a9f272b82de9fe73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntaje: 0
-  vida: 0
-  vidas: 0
-  prefabAntorcha: {fileID: 4532128132370706530, guid: bfa6a01433f6131459a05c7557c5db11, type: 3}
-  spotAntorcha1: {fileID: 1603475420}
-  spotAntorcha2: {fileID: 1607093229}
-  spotAntorcha3: {fileID: 194099866}
-  spotAntorcha4: {fileID: 169839731}
-  spotAntorcha5: {fileID: 47095843}
-  spotAntorcha6: {fileID: 186935539}
-  spotAntorcha7: {fileID: 846581033}
-  spotAntorcha8: {fileID: 1804189819}
-  spotAntorcha9: {fileID: 1984114641}
-  spotAntorcha10: {fileID: 126435236}
-  spotAntorcha11: {fileID: 936882090}
-  spotAntorcha12: {fileID: 940736993}
-  spotAntorcha13: {fileID: 1074432370}
-  spotAntorcha14: {fileID: 1094196204}
-  spotAntorcha15: {fileID: 469079547}
-  spotAntorcha16: {fileID: 2014693937}
-  spotAntorcha17: {fileID: 1449900742}
-  spotAntorcha18: {fileID: 668776787}
-  spotAntorcha19: {fileID: 226396741}
-  spotAntorcha20: {fileID: 1639151381}
-  spotAntorcha21: {fileID: 1561111688}
-  spotAntorcha22: {fileID: 1892424316}
-  spotAntorcha23: {fileID: 1134596306}
-  spotAntorcha24: {fileID: 367080765}
-  spotAntorcha25: {fileID: 403262713}
-  spotAntorcha26: {fileID: 1751963354}
-  spotAntorcha27: {fileID: 1394331611}
-  spotAntorcha28: {fileID: 2004939439}
-  spotAntorcha29: {fileID: 492581810}
-  spotAntorcha30: {fileID: 758994455}
-  spotAntorcha31: {fileID: 50183071}
 --- !u!1 &1639151380
 GameObject:
   m_ObjectHideFlags: 0
@@ -7057,6 +7111,37 @@ Transform:
   - {fileID: 1266130002}
   m_Father: {fileID: 1058153518}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1959485345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1959485346}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1959485346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959485345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.7319999, y: 0.7379999, z: -15.561001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1967485903
 GameObject:

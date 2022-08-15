@@ -54,7 +54,7 @@ public class ControlJugador : MonoBehaviour
     {
         Animar();
         ConsultarM();
-        VerificaVida();
+        //VerificaVida();
         VerificaCaida();
     }
 
@@ -123,13 +123,13 @@ public class ControlJugador : MonoBehaviour
     }
 
     /*Método para Verificar Vida*/
-    void VerificaVida(){
+    /*void VerificaVida(){
         if(GameManager.GetVida()<=0){
             Debug.Log("Haz Muerto "+GameManager.GetVida());
             estaMuerto=true;
             anim.SetBool("estaMuerto",true);
         }
-    }
+    }*/
 
     /*Método para Verificar Caida del Tablero*/
     void VerificaCaida(){

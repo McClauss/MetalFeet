@@ -71,11 +71,11 @@ public class Ragdoll : MonoBehaviour
             getRagdoll=true;
         }
     }
-
+    /*
     //Para que se active el ragdoll al colisionar con X objeto con el tag "ActivarRagdoll"
     void OnCollisionEnter(Collision col){
         if(col.gameObject.CompareTag("ActivarRagdoll")){
             getRagdoll=true;
         }
-    }
+    }*/
 }

@@ -8,6 +8,7 @@ TagManager:
   - EnemigoNv1
   - Jugador
   - Orbe
+  - Hacha Corta
   layers:
   - Default
   - TransparentFX

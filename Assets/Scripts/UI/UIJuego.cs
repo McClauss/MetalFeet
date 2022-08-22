@@ -9,7 +9,11 @@ public class UIJuego : MonoBehaviour
     public Text textoVida;
 
     private bool pausaActiva;
+    private bool armaActiva;
+    private bool tesoroActiva;
     public GameObject pausaMenu;
+    public GameObject armaMenu;
+    public GameObject tesoroMenu;
 
     /*
     public Image barraVida;
@@ -20,6 +24,8 @@ public class UIJuego : MonoBehaviour
     void Start()
     {
         pausaMenu.SetActive(false);
+        armaMenu.SetActive(false);
+        tesoroMenu.SetActive(false);
     }
 
     void Update()
@@ -30,8 +36,9 @@ public class UIJuego : MonoBehaviour
         //barraVida.fillAmount=vidaActual/maxVida;
 
         TogglePausa();
+        //ToggleArmas();
+        //ToggleTesoros();
     }
-
     public void TogglePausa(){
         if(Input.GetKeyDown(KeyCode.Escape)){
             if(pausaActiva){
@@ -46,6 +53,8 @@ public class UIJuego : MonoBehaviour
         pausaMenu.SetActive(false);
         Time.timeScale=1;
         pausaActiva=false;
+        armaActiva=false;
+        tesoroActiva=false;
     }
     void PausaJuego(){
         pausaMenu.SetActive(true);
@@ -53,7 +62,27 @@ public class UIJuego : MonoBehaviour
         pausaActiva=true;
     }
 
+    void ArmaMenu(){
+        armaMenu.SetActive(true);
+        Time.timeScale=0;
+        armaActiva=true;
+        tesoroActiva=false;
+    }
+
+    void TesoroMenu(){
+        tesoroMenu.SetActive(true);
+        Time.timeScale=0;
+        tesoroActiva=true;
+        armaActiva=false;
+    }
+
     public void MenuPrincipal(){
         SceneManager.LoadScene(0);
+    }
+    public void MenuArmas(){
+        ArmaMenu();
+    }
+    public void MenuTesoros(){
+        TesoroMenu();
     }
 }

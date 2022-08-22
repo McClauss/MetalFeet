@@ -60,6 +60,12 @@ public class GameManager : MonoBehaviour
         vidaEnemigoNv1=vidaEnemigoNv1+cantidad;
         Debug.Log("Impacto!. Sangre restante: "+vidaEnemigoNv1);
     }
+    
+    //Méotodo para modificar puntaje
+    public static void ModificaPuntaje(int cantidad){
+        puntaje=puntaje+cantidad;
+        Debug.Log("Puntaje: "+puntaje+" más "+cantidad);
+    }
 
     public static int GetPuntaje(){
         return puntaje;

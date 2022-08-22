@@ -99,6 +99,7 @@ public class TDA : MonoBehaviour
         orbes[i].SetActive(false);
         i++;
         GameManager.ModificaVida(10);
+        GameManager.ModificaPuntaje(20);
         if (banderaCuracion==false){
             SumaHabilidad();
         }
